@@ -1,32 +1,21 @@
 import { Disclosure} from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
-const user = {
-    name: 'Tom Cook',
-    email: 'tom@example.com',
-    imageUrl:
-      'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-  }
-  const navigation = [
-    { name: 'Dashboard', href: '/', current: true },
-    { name: 'Team', href: '/team', current: false },
-    { name: 'Projects', href: '#', current: false },
-    { name: 'Calendar', href: '#', current: false },
-    { name: 'Reports', href: '#', current: false },
-  ]
-  const userNavigation = [
-    { name: 'Your Profile', href: '#' },
-    { name: 'Settings', href: '#' },
-    { name: 'Sign out', href: '#' },
-  ]
+
+  
+interface Info  {
+
+  user: {name:string, email:string,  imageUrl:string};
+
+  navigation: { name:string, href: string , current:boolean}[];
+  userNavigation: { name:string, href: string }[];
+}
   
   function classNames(...classes : any) {
     return classes.filter(Boolean).join(' ')
   }
   
   
-
-
 export  const MobileMenu = ({open}:{open:boolean})=>{
     return(
       <div className="-mr-2 flex md:hidden">
@@ -43,7 +32,9 @@ export  const MobileMenu = ({open}:{open:boolean})=>{
     )
   }
 
-  export  const DiscloserPanel = ({userNavigation}:{userNavigation:{name: string;href: string;}[]})=>{
+
+
+  export  const DiscloserPanel = ({user, navigation , userNavigation}: Info)=>{
     return(
       <Disclosure.Panel className="md:hidden">
             <div className="space-y-1 px-2 pt-2 pb-3 sm:px-3">

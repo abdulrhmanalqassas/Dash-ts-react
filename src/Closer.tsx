@@ -76,7 +76,7 @@ const Closer = ()=>(
                 </button>
   
                 {/* Profile dropdown */}
-                <ProfilePenal  ></ProfilePenal>
+                <ProfilePenal user={user} userNavigation={userNavigation} ></ProfilePenal>
 
               </div>
             </div>
@@ -86,7 +86,7 @@ const Closer = ()=>(
         </div>
   
      
-        <DiscloserPanel  userNavigation={ userNavigation} ></DiscloserPanel>
+        <DiscloserPanel userNavigation={userNavigation} user={user} navigation={ navigation} ></DiscloserPanel>
       </>
     )}
   </Disclosure>
