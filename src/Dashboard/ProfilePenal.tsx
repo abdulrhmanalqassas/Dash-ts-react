@@ -1,20 +1,17 @@
 import { Menu, Transition } from "@headlessui/react";
-import  { Fragment } from "react";
-
+import { Fragment } from "react";
 
 function classNames(...classes: any) {
   return classes.filter(Boolean).join(" ");
 }
 
-interface profileInfo  {
+interface profileInfo {
+  user: { name: string; email: string; imageUrl: string };
 
-  user: {name:string, email:string,  imageUrl:string};
-
-  userNavigation: { name:string, href: string }[];
-
+  userNavigation: { name: string; href: string }[];
 }
 
-const ProfilePenal = ({user, userNavigation}: profileInfo) => {
+const ProfilePenal = ({ user, userNavigation }: profileInfo) => {
   return (
     <Menu as="div" className="relative ml-3">
       <div>
