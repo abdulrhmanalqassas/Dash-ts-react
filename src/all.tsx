@@ -1,7 +1,8 @@
 import Closer from "./Closer";
 import Table from "./Table";
-import InfoCards from "./InfoCards"
-import BallanceCard from "./BallanceCard"
+import InfoCards from "./InfoCards";
+import { Routes, Route } from "react-router-dom";
+import BallanceCard from "./BallanceCard";
 
 
 const Example = () => {
@@ -21,9 +22,17 @@ const Example = () => {
           <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
             {/* Replace with Chileds And route */}
             <div className="px-4  py-6 sm:px-0">
-              <Table></Table>
-              <InfoCards></InfoCards>
-              <BallanceCard></BallanceCard>
+            <Routes>
+        <Route path="/*" element={<>
+          <InfoCards></InfoCards>
+          <BallanceCard></BallanceCard>
+        </>} />
+        <Route path="/team" element={  <Table></Table>} />
+       
+      </Routes>
+            
+              
+              
             </div>
             {/* /End replace */}
           </div>
