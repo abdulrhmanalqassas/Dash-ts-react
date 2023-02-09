@@ -5,5 +5,4 @@ import All from "./Dashboard/all";
 function App() {
   return <All />;
 }
-
 export default App;

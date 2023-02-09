@@ -3,6 +3,27 @@ import Table from "./Table";
 import InfoCards from "./home/InfoCards";
 import { Routes, Route } from "react-router-dom";
 import BallanceCard from "./home/BallanceCard";
+import { AdminCards } from "./home/AdminCards";
+
+const x= {
+  value:1254,
+  tittle: "Total",
+  color:"green"
+}
+
+const  carrdsaray= [{
+  value:2541,
+  tittle: "Accu",
+  color:"blue"
+},{
+  value:7524,
+  tittle: "Trades",
+  color:"red"
+},{
+  value:1000,
+  tittle: "OPR",
+  color:"yellow"
+},x]
 
 const Example = () => {
   return (
@@ -26,8 +47,12 @@ const Example = () => {
                   path="/*"
                   element={
                     <>
+                     <AdminCards carrdsAray={ carrdsaray}></AdminCards>
                       <InfoCards></InfoCards>
+                      <div>
                       <BallanceCard></BallanceCard>
+                      </div>
+                    
                     </>
                   }
                 />

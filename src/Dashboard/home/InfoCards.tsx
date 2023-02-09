@@ -44,7 +44,7 @@ const InfoCard = () => {
 
 const InfoCards = () => {
   return (
-    <div className="my-auto mb-6 lg:w-[75%] xl:w-[80%] 2xl:w-[85%]">
+    <div className="my-auto mb-6 ">
       <div className="px-6 pt-6 2xl:container">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           <InfoCard></InfoCard>
