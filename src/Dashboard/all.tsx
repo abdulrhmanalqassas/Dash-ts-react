@@ -56,7 +56,8 @@ const Example = () => {
                     </>
                   }
                 />
-                <Route path="/team" element={<Table></Table>} />
+                <Route path="/team" element={<Table  tableType="users" ></Table>} />
+                <Route path="/projects" element={<Table  tableType="projects" ></Table>} />
               </Routes>
             </div>
             {/* /End replace */}
