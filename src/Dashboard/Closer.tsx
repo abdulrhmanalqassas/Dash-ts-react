@@ -12,10 +12,10 @@ const user = {
 };
 const navigation = [
   { name: "Dashboard", href: "/", current: false },
-  { name: "Team", href: "team", current: false },
-  { name: "Projects", href: "projects", current: false },
-  { name: "Calendar", href: "#", current: false },
-  { name: "Reports", href: "#", current: false },
+  { name: "Team", href: "Dash-ts-react/team", current: false },
+  { name: "Projects", href: "Dash-ts-react/projects", current: false },
+  { name: "Calendar", href: "Dash-ts-react/#", current: false },
+  { name: "Reports", href: "Dash-ts-react/#", current: false },
 ];
 const userNavigation = [
   { name: "Your Profile", href: "#" },
@@ -59,7 +59,7 @@ const Closer = () => {
                       )}
                       aria-current={item.current ? "page" : undefined}
                     >
-                      {item.name} .
+                      {item.name}
                     </a>
                   ))}
                 </div>
