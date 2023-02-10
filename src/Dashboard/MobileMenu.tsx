@@ -1,5 +1,6 @@
 import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { useNavigate } from "react-router-dom";
 
 interface Info {
   user: { name: string; email: string; imageUrl: string };
@@ -29,6 +30,7 @@ export const MobileMenu = ({ open }: { open: boolean }) => {
 };
 
 export const DiscloserPanel = ({ user, navigation, userNavigation }: Info) => {
+  const navigate = useNavigate();
   return (
     <Disclosure.Panel className="md:hidden">
       <div className="space-y-1 px-2 pt-2 pb-3 sm:px-3">
@@ -36,7 +38,7 @@ export const DiscloserPanel = ({ user, navigation, userNavigation }: Info) => {
           <Disclosure.Button
             key={item.name}
             as="a"
-            href={item.href}
+            onClick={() => navigate(item.href)}
             className={classNames(
               item.current
                 ? "bg-gray-900 text-white"
