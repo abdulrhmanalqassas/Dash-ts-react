@@ -1,7 +1,7 @@
 {
   "name": "ts-react",
   "version": "0.1.0",
-  "homepage": "https://abdulrhmanalqassas.github.io/demodash/",
+  "homepage": "https://abdulrhmanalqassas.github.io/Dash-ts-react/",
   "private": true,
   "dependencies": {
     "@headlessui/react": "^1.7.9",
