@@ -4,26 +4,31 @@ import InfoCards from "./home/InfoCards";
 import { Routes, Route } from "react-router-dom";
 import BallanceCard from "./home/BallanceCard";
 import { AdminCards } from "./home/AdminCards";
-
-const x= {
-  value:1254,
+import { MainChartCard } from "./charts/MainChartCard";
+const x = {
+  value: 1254,
   tittle: "Total",
-  color:"green"
-}
+  color: "green",
+};
 
-const  carrdsaray= [{
-  value:2541,
-  tittle: "Accu",
-  color:"blue"
-},{
-  value:7524,
-  tittle: "Trades",
-  color:"red"
-},{
-  value:1000,
-  tittle: "OPR",
-  color:"yellow"
-},x]
+const carrdsaray = [
+  {
+    value: 2541,
+    tittle: "Accu",
+    color: "blue",
+  },
+  {
+    value: 7524,
+    tittle: "Trades",
+    color: "red",
+  },
+  {
+    value: 1000,
+    tittle: "OPR",
+    color: "yellow",
+  },
+  x,
+];
 
 const Example = () => {
   return (
@@ -34,7 +39,7 @@ const Example = () => {
         <header className="bg-white shadow">
           <div className="mx-auto max-w-7xl py-6 px-4 sm:px-6 lg:px-8">
             <h1 className="text-3xl font-bold tracking-tight text-gray-900">
-              Dashboard
+              AlQassas Dashboard
             </h1>
           </div>
         </header>
@@ -47,17 +52,26 @@ const Example = () => {
                   path="/*"
                   element={
                     <>
-                     <AdminCards carrdsAray={ carrdsaray}></AdminCards>
+                    
+                      <AdminCards carrdsAray={carrdsaray}></AdminCards>
+                      {/* {main chart card } */}
+                      <MainChartCard />
                       <InfoCards></InfoCards>
                       <div>
-                      <BallanceCard></BallanceCard>
+                        <BallanceCard></BallanceCard>
                       </div>
-                    
                     </>
                   }
                 />
-                <Route path="/team" element={<Table  tableType="users" ></Table>} />
-                <Route path="/projects" element={<Table  tableType="projects" ></Table>} />
+
+                <Route
+                  path="/team"
+                  element={<Table tableType="users"></Table>}
+                />
+                <Route
+                  path="/projects"
+                  element={<Table tableType="projects"></Table>}
+                />
               </Routes>
             </div>
             {/* /End replace */}

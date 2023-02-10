@@ -1,4 +1,4 @@
-import { UpArrow, ChartsTable, Chart3, Chart2, Chart1 } from "./Charts";
+import { UpArrow, ChartsTable, Chart3, Chart2, Chart1 } from "../charts/Charts";
 
 const CardHeader = () => {
   return (

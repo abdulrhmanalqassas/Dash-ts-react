@@ -1,3 +1,6 @@
+
+
+
 const TableRow = () => {
   return (
     <tr className="hover:bg-gray-50">
@@ -20,6 +23,11 @@ const TableRow = () => {
           <span className="h-1.5 w-1.5 rounded-full bg-green-600"></span>
           Active
         </span>
+        <span className="inline-flex items-center gap-1 rounded-full bg-green-50 px-2 py-1 text-xs font-semibold text-red-600">
+          <span className="h-1.5 w-1.5 rounded-full bg-red-600"></span>
+          unActive
+        </span>
+        
       </td>
       <td className="px-6 py-4">Product Designer</td>
       <td className="px-6 py-4">
@@ -89,7 +97,7 @@ const TableHead = ({ tableTittles }: { tableTittles: string[] }) => {
             </th>
           );
         })}
-        <th scope="col" className="px-6 py-4 font-medium text-gray-900"></th>
+        
       </tr>
     </thead>
   );
@@ -101,38 +109,38 @@ const ProjectRow = () => {
       <td className="py-4 px-6 text-left">
         <div className="flex items-center">
           <div className="mr-2">
-            <img
+            <img alt="on team"
               className="w-6 h-6"
               src="https://img.icons8.com/color/48/000000/php.png"
             />
           </div>
-          <span className="font-medium">PHP Project</span>
+          <span className="font-medium">js Project</span>
         </div>
       </td>
       <td className="py-4 px-6 text-left">
         <div className="flex items-center">
           <div className="mr-2">
-            <img
+            <img alt="on team"
               className="w-6 h-6 rounded-full"
-              src="https://randomuser.me/api/portraits/men/8.jpg"
+              src="https://randomuser.me/api/portraits/lego/3.jpg"
             />
           </div>
-          <span>Kylan Dorsey</span>
+          <span>A.Alqasasa</span>
         </div>
       </td>
       <td className="py-4 px-6 text-center">
         <div className="flex items-center justify-center">
-          <img
+          <img alt="on team"
             className="w-6 h-6 rounded-full border-gray-200 border transform hover:scale-125"
-            src="https://randomuser.me/api/portraits/men/1.jpg"
+            src="https://randomuser.me/api/portraits/men/2.jpg"
           />
-          <img
+          <img alt="on team"
             className="w-6 h-6 rounded-full border-gray-200 border -m-1 transform hover:scale-125"
-            src="https://randomuser.me/api/portraits/women/2.jpg"
+            src="https://randomuser.me/api/portraits/women/3.jpg"
           />
-          <img
+          <img alt="on team"
             className="w-6 h-6 rounded-full border-gray-200 border -m-1 transform hover:scale-125"
-            src="https://randomuser.me/api/portraits/men/3.jpg"
+            src="https://randomuser.me/api/portraits/men/5.jpg"
           />
         </div>
       </td>
