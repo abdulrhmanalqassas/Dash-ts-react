@@ -2,6 +2,7 @@ import { Disclosure } from "@headlessui/react";
 import { BellIcon } from "@heroicons/react/24/outline";
 import { MobileMenu, DiscloserPanel } from "./MobileMenu";
 import ProfilePenal from "./ProfilePenal";
+import { useNavigate } from "react-router-dom";
 
 const user = {
   name: "alQassas Cook",
@@ -26,7 +27,11 @@ function classNames(...classes: any) {
   return classes.filter(Boolean).join(" ");
 }
 
-const Closer = () => (
+const Closer = () => {
+  
+  const navigate = useNavigate();
+  
+  return(
   <Disclosure as="nav" className="bg-gray-800">
     {({ open }: { open: any }) => (
       <>
@@ -45,7 +50,7 @@ const Closer = () => (
                   {navigation.map((item) => (
                     <a
                       key={item.name}
-                      href={item.href}
+                      onClick={() => navigate(item.href)}
                       className={classNames(
                         item.current
                           ? "bg-gray-900 text-white"
@@ -54,7 +59,7 @@ const Closer = () => (
                       )}
                       aria-current={item.current ? "page" : undefined}
                     >
-                      {item.name}
+                      {item.name} .
                     </a>
                   ))}
                 </div>
@@ -90,6 +95,6 @@ const Closer = () => (
       </>
     )}
   </Disclosure>
-);
+)};
 
 export default Closer;
