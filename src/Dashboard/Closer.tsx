@@ -10,9 +10,9 @@ const user = {
     "https://randomuser.me/api/portraits/men/9.jpg",
 };
 const navigation = [
-  { name: "Dashboard", href: "/", current: true },
-  { name: "Team", href: "/team", current: false },
-  { name: "Projects", href: "/projects", current: false },
+  { name: "Dashboard", href: "/", current: false },
+  { name: "Team", href: "Dash-ts-react//team", current: false },
+  { name: "Projects", href: "Dash-ts-react//projects", current: false },
   { name: "Calendar", href: "#", current: false },
   { name: "Reports", href: "#", current: false },
 ];

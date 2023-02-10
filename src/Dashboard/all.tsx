@@ -65,11 +65,11 @@ const Example = () => {
                 />
 
                 <Route
-                  path="/team"
+                  path="/Dash-ts-react/team"
                   element={<Table tableType="users"></Table>}
                 />
                 <Route
-                  path="/projects"
+                  path="/Dash-ts-react/projects"
                   element={<Table tableType="projects"></Table>}
                 />
               </Routes>
