@@ -16,7 +16,7 @@ interface cardInfo {
 const Card = ({ color, cardInformation }: cardInfo) => {
   const colorVariants = {
     "blue": {
-      butt: `text-sm mt-6 px-4 py-2 bg- blue-400 text-white rounded-lg  tracking-wider hover:bg- blue-300 outline-none`,
+      butt: `text-sm mt-6 px-4 py-2 bg-blue-400 text-white rounded-lg  tracking-wider hover:bg-blue-300 outline-none`,
       div: `bg-gradient-to-tr from-blue-500 to-blue-400 w-32 h-32  rounded-full shadow-2xl shadow-blue-400 border-white  border-dashed border-2  flex justify-center items-center `,
       h3: `mt-2 text-xl font-bold text-blue-500 text-left`,
     },
