@@ -1,8 +1,8 @@
 import React from "react";
 import "./index.css";
 import "./App.css";
-import All from "./Dashboard/all";
+import DashBoard from "./Dashboard/DashBoard";
 function App() {
-  return <All />;
+  return <DashBoard />;
 }
 export default App;
