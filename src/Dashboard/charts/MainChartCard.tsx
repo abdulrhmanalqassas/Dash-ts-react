@@ -13,7 +13,7 @@ import {
   const data = [
     {
       name: "Page A",
-      uv: 4000,
+      uv: 6000,
       pv: 2400,
       amt: 2400,
     },
@@ -39,19 +39,19 @@ import {
       name: "Page E",
       uv: 1890,
       pv: 4800,
-      amt: 2181,
+      amt: 0,
     },
     {
       name: "Page F",
       uv: 2390,
-      pv: 3800,
+      pv: 0,
       amt: 2500,
     },
     {
       name: "Page G",
-      uv: 3490,
+      uv: 0,
       pv: 4300,
-      amt: 2100,
+      amt: 7100,
     },
   ];  
 
@@ -79,6 +79,18 @@ export const MainChartCard = ()=>{
               dataKey="uv"
               stroke="#8884d8"
               fill="#8884d8"
+            />
+             <Area
+              type="monotone"
+              dataKey="pv"
+              stroke="red"
+              fill="cyan"
+            />
+             <Area
+              type="monotone"
+              dataKey="amt"
+              stroke="green"
+              fill=" #cff9d3"
             />
           </AreaChart>
         </ResponsiveContainer>

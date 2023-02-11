@@ -1,13 +1,13 @@
 
 
 interface adminCard {
-  value: number; color: string; tittle:string
+  value: number; classColor: string; tittle:string
 }
 
-const AdminCard = ({value , color , tittle}:adminCard)=>{
+const AdminCard = ({value , classColor , tittle}:adminCard)=>{
 
     return (
-        <div className={`bg-${color}-200 py-2 rounded-md `}>
+        <div className={classColor}>
     <div className="flex">
       <div>
       <h2 className="text-base md:text-2xl lg:text-5xl px-2 whitespace-no-wrap text-gray-600">{tittle}</h2>

@@ -8,24 +8,24 @@ import { MainChartCard } from "./charts/MainChartCard";
 const x = {
   value: 1254,
   tittle: "Total",
-  color: "green",
+  classColor:`bg-green-200 py-2 rounded-md ` ,
 };
 
 const carrdsaray = [
   {
     value: 2541,
     tittle: "Accu",
-    color: "blue",
+    classColor: `bg-blue-200 py-2 rounded-md `,
   },
   {
     value: 7524,
     tittle: "Trades",
-    color: "red",
+    classColor: `bg-red-200 py-2 rounded-md `,
   },
   {
     value: 1000,
     tittle: "OPR",
-    color: "yellow",
+    classColor: `bg-yellow-200 py-2 rounded-md `,
   },
   x,
 ];

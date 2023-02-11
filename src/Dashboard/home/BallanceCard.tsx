@@ -13,9 +13,24 @@ interface cardInfo {
   };
 }
 
-
-
 const Card = ({ color, cardInformation }: cardInfo) => {
+  const colorVariants = {
+    "blue": {
+      butt: `text-sm mt-6 px-4 py-2 bg- blue-400 text-white rounded-lg  tracking-wider hover:bg- blue-300 outline-none`,
+      div: `bg-gradient-to-tr from-blue-500 to-blue-400 w-32 h-32  rounded-full shadow-2xl shadow-blue-400 border-white  border-dashed border-2  flex justify-center items-center `,
+      h3: `mt-2 text-xl font-bold text-blue-500 text-left`,
+    },
+    "red": {
+      butt: `text-sm mt-6 px-4 py-2 bg-red-400 text-white rounded-lg  tracking-wider hover:bg-red-300 outline-none`,
+      div: `bg-gradient-to-tr from-red-500 to-red-400 w-32 h-32  rounded-full shadow-2xl shadow-red-400 border-white  border-dashed border-2  flex justify-center items-center `,
+      h3: `mt-2 text-xl font-bold text-red-500 text-left`,
+    },
+    "yellow": {
+      butt: `text-sm mt-6 px-4 py-2 bg-yellow-400 text-white rounded-lg  tracking-wider hover:bg-yellow-300 outline-none`,
+      div: `bg-gradient-to-tr from-yellow-500 to-yellow-400 w-32 h-32  rounded-full shadow-2xl shadow-yellow-400 border-white  border-dashed border-2  flex justify-center items-center `,
+      h3: `mt-2 text-xl font-bold text-yellow-500 text-left`,
+    },
+  };
   return (
     <div className="p-4 sm:w-1/2 lg:w-1/3 w-full hover:scale-105 duration-500">
       <div className=" flex items-center  justify-between p-4  rounded-lg bg-white shadow-indigo-50 shadow-md">
@@ -23,7 +38,7 @@ const Card = ({ color, cardInformation }: cardInfo) => {
           <h2 className="text-gray-900 text-lg font-bold">
             {cardInformation.tittle}
           </h2>
-          <h3 className={`mt-2 text-xl font-bold text-${color}-500 text-left`}>
+          <h3 className={colorVariants[color as keyof typeof colorVariants].h3}>
             {cardInformation.transaction.value}{" "}
             {cardInformation.transaction.currency}
           </h3>
@@ -76,7 +91,7 @@ const cardsApi = [
     },
   },
   {
-    color: "cyan",
+    color: "blue",
     cardInformation: {
       tittle: "string",
       transaction: {
@@ -88,41 +103,43 @@ const cardsApi = [
     },
   },
   {
-    color: "orange",
+    color: "yellow",
     cardInformation: {
-      tittle: "string",
+      tittle: "cashed in",
       transaction: {
-        value: 5,
-        currency: "string",
-        reason: "string",
-        type: "string",
+        value: 500,
+        currency: "$",
+        reason: "cashed in",
+        type: "cash",
       },
     },
   },
   {
-    color: "gray",
+    color: "blue",
     cardInformation: {
-      tittle: "string",
+      tittle: "out dated",
       transaction: {
-        value: 5,
-        currency: "string",
-        reason: "string",
-        type: "string",
+        value: 2543,
+        currency: "egp",
+        reason: "cash out",
+        type: "OUT",
       },
     },
   },
   {
-    color: "green",
+    color: "red",
     cardInformation: {
       tittle: "string",
       transaction: {
-        value: 5,
-        currency: "string",
-        reason: "string",
-        type: "string",
+        value: 5552,
+        currency: "$",
+        reason: "losses",
+        type: "bad",
       },
     },
   },
+  
+ 
 ];
 const BallanceCard = () => {
   return (
