@@ -58,7 +58,7 @@ import {
 export const MainChartCard = ()=>{
     return(
         <div className="flex content-around flex-wrap h-fit my-3  py-4 px-3 rounded-xl border  border-gray-200 bg-white">
-        <div className="h-96 w-4/5">
+        <div className="h-80 w-4/5">
         <ResponsiveContainer className="grow " width="100%"height="100%">
           <AreaChart
             data={data}
