@@ -26,7 +26,7 @@ import {
     {
       name: "Page C",
       uv: 2000,
-      pv: 9800,
+      pv: 7600,
       amt: 2290,
     },
     {
