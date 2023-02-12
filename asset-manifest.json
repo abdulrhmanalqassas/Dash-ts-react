@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Dash-ts-react/static/css/main.974f5553.css",
-    "main.js": "/Dash-ts-react/static/js/main.17268b0f.js",
+    "main.js": "/Dash-ts-react/static/js/main.5b675c27.js",
     "static/js/787.698e746e.chunk.js": "/Dash-ts-react/static/js/787.698e746e.chunk.js",
     "index.html": "/Dash-ts-react/index.html",
     "main.974f5553.css.map": "/Dash-ts-react/static/css/main.974f5553.css.map",
-    "main.17268b0f.js.map": "/Dash-ts-react/static/js/main.17268b0f.js.map",
+    "main.5b675c27.js.map": "/Dash-ts-react/static/js/main.5b675c27.js.map",
     "787.698e746e.chunk.js.map": "/Dash-ts-react/static/js/787.698e746e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.974f5553.css",
-    "static/js/main.17268b0f.js"
+    "static/js/main.5b675c27.js"
   ]
 }
